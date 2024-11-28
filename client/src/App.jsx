@@ -4,6 +4,7 @@ import Users from "./pages/Users";
 import Businesses from "./pages/Businesses";
 import CreateReview from "./pages/CreateReview";
 import Home from "./pages/Home";
+import Register from "./components/Register/Register";
 
 function App() {
   const [auth, setAuth] = useState({});
@@ -88,6 +89,9 @@ function App() {
         />
         <Route path="/users" element={<Users users={users} />} />
         {!!auth.id && <Route path="/createReview" element={<CreateReview />} />}
+        {/* <Route path="/login" element={<Login setToken={setToken} token={token} />} />
+        <Route path="/register" element={<Register setToken={setToken} />} />
+        <Route path="/Account" element={<Account token={token}/>} /> */}
       </Routes>
     </>
   );
